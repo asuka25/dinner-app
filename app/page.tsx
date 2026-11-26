@@ -179,7 +179,24 @@ export default function Home() {
           <div className="brand">🍽 Dinner App</div>
           <p className="group-label">{groupName || "家族の晩ご飯"}</p>
         </div>
-        <div className="avatar">{currentUser.slice(0, 1)}</div>
+        
+
+        <div className="header-actions">
+          <div className="avatar">
+            {currentUser.slice(0, 1)}
+          </div>
+
+          <button
+            className="logout-button"
+            onClick={() => {
+              setScreen("join");
+              setSelectedDate(null);
+              setIsCreate(false);
+            }}
+          >
+            退出
+          </button>
+        </div>
       </header>
 
       <section className="dashboard">
